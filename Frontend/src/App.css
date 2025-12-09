@@ -1,0 +1,442 @@
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.img-fight {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* .pro-main-text{
+    display: flex;
+    align-items: center;
+} */
+.main-text-pro1 {
+    padding-top: 75px;
+}
+
+.pro-text {
+    font-size: 26px;
+}
+
+.pro-para {
+    font-size: 16px;
+    width: 304px;
+    font-weight: 440;
+    color: black;
+    text-align: left;
+}
+
+.hyp-text-main {
+    padding-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hyp-text {
+    font-size: 23px;
+}
+
+.hyp-img {
+    width: 20%;
+    object-fit: cover;
+    height: 320px;
+}
+
+.main-hyp {
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 20%;
+    cursor: pointer;
+    height: 320px;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: rgb(240, 240, 240);
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+}
+
+.card img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 320px;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity .2s ease-out;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    /* Background color for hover */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease-out;
+    /* Smooth fade-in */
+    z-index: 1;
+    /* Ensure it appears behind text but above the image */
+}
+
+.card p,
+.card a {
+    position: absolute;
+    margin: 0;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+    z-index: 2;
+    /* Ensure text appears above the black background */
+}
+
+.card p {
+    inset: auto auto 20px 30px;
+}
+
+.card a {
+    inset: auto auto 40px 30px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.card:hover::before {
+    opacity: 0.8;
+    /*Show the background color on hover */
+}
+
+.card:hover p,
+.card:hover a {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+}
+
+.card:hover img {
+    transition: opacity .3s ease-in;
+    opacity: 0.9;
+    /* Slight fade for the image if needed */
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+}
+
+.check-dev {
+    padding-top: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dev-h {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.dev-p {
+    font-size: 16px;
+    width: 96%;
+}
+
+.get-h {
+    padding-top: 10px;
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+}
+
+.now-btn {
+    background-color: white;
+    border: none;
+    width: 200px;
+    padding: 9px;
+}
+
+.now-btn:hover {
+    transition: 0.6s ease-in-out;
+    background-color: black;
+    color: white;
+}
+
+.main-get {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+
+
+/* Mega.jsx */
+.search-icon {
+    width: 25px;
+}
+
+.main-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 15%;
+    /* height: 40px; */
+    background: #f3f3f3;
+    border: none;
+}
+
+.border-boxed {
+    width: 80%;
+    background: #f3f3f3;
+    border: none;
+}
+
+.border-boxed:focus {
+    outline: none;
+}
+
+.img-boxed {
+    width: 160px;
+    cursor: pointer;
+}
+
+.mega-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    background-color: white;
+    padding: 0px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    color: black;
+    height: 65px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-item {
+    padding-top: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-item span {
+    color: black;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.menu-item span:hover {
+    text-decoration: underline;
+}
+
+.dropdown {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.dropdown-item {
+    color: black;
+    text-decoration: none;
+    /* padding: 5px 10px; */
+    /* background-color: #555; */
+    /* border-radius: 4px; */
+}
+
+.dropdown-item:hover {
+    background-color: white;
+    color: black;
+    text-decoration: underline;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.dropdown-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Dropdown */
+.dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background: white;
+}
+
+/* Toggle */
+/* Main Container */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    z-index: 10; /* Ensure it appears above other elements */
+  }
+  
+  /* Dropdown Content */
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 200px;
+    padding: 10px;
+    z-index: 20; /* Higher z-index to stay above images */
+  }
+  
+  /* Checkbox Group */
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* Small Checkboxes */
+  .checkbox-group input[type="checkbox"] {
+    width: 14px;  /* Smaller size */
+    height: 14px;
+    accent-color: #007bff; /* Checkbox color */
+  }
+  
+  
+
+
+@media screen and (max-width: 1200px) {
+    .img-boxed {
+        width: 107px;
+    }
+
+    .menu-item span {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .img-boxed {
+        width: 85px;
+    }
+
+    .menu-item span {
+        font-size: 13px;
+    }
+
+    .card {
+        height: 204px;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .mega-menu {
+        display: none;
+    }
+
+    .mega-menu {
+        z-index: -1;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .main-box {
+        width: 25%;
+    }
+
+    .get-h {
+        font-size: 22px;
+    }
+
+    .card {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .main-get {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 33%;
+    }
+
+    .img-fight {
+        height: 371px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .card {
+        width: 50%;
+    }
+
+    .img-fight {
+        height: 331px;
+    }
+}
+
+@media screen and (max-width:476px) {
+    .get-h {
+        font-size: 18px;
+    }
+
+    .main-get {
+        gap: 10px;
+    }
+
+    .img-fight {
+        height: 290px;
+    }
+}
+
+@media screen and (max-width:376px) {
+    .get-h {
+        font-size: 13px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:655px) {
+    .check-dev {
+        flex-direction: column;
+    }
+}

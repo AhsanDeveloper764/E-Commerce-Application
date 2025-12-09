@@ -1,0 +1,171 @@
+.containerabc {
+    max-width: 1320px;
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+}
+.sign-text{
+    font-weight: bold;
+}
+form{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-size: 17px;
+    font-weight: 500;
+}
+input {
+    border: none;
+    font-size: 18px;
+    height: 50px;
+    padding: 1em;
+    background: #f3f3f3;
+    width: 100%;
+}
+input:focus{
+    outline: none;
+}
+.form-btn{
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+.sign-btn{
+    border: none;
+    background: black;
+    color: white;
+    padding: 17px;
+    font-weight: bold;
+    font-size: 18px;
+    width: 250px;
+}
+.sign-btn:hover{
+    border: 1px solid black;
+    background: white;
+    color: black;
+}
+.main-cen{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.half-cen{
+    background-color: #f3f3f3;
+    padding: 40px;
+    width: 100%;
+}
+.new-head12{
+    font-size: 25px;
+    font-weight: 700;
+}
+.cl-pad{
+    padding-top: 20px;
+}
+.sign-img{
+    padding: 20px;
+}
+.containerSign{
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.sign-anc{
+    text-decoration: none;
+    color: #949494;
+    font-size: 20px;
+    font-style: italic;
+}
+.acc-head{
+    font-size: 42px;
+    font-weight: bold;
+}
+.input-signup{
+    background-color: white;
+    border: 1px solid #8f8f8f;
+    color: #666;
+}
+.inp{
+    color: #666;
+    font-size: 17px;
+}
+.abc-form{
+    display: flex !important;
+    /* align-items: center !important; */
+    justify-content: center !important;
+    width: 800px;
+    margin: auto !important;
+}
+.abc-modal-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.abc-modal-head{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+}
+.abc-modal-para{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 350;
+}
+.abc-modal-anc{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 7px;
+    color: black;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+.email-xyz{
+    width: 25%;
+}
+.main-email-xyz{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.sub-btn{
+    font-weight: 550;
+    background-color: black;
+    color: white;
+    width: 200px;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+@media screen and (max-width:840px){
+    .abc-form{
+        width: 600px;
+    }
+}
+@media screen and (max-width:610px){
+    .abc-form{
+        width: 500px;
+    }
+}
+@media screen and (max-width:540px){
+    .abc-form{
+        width: 400px;
+    }
+}
+@media screen and (max-width:431px){
+    .abc-form{
+        width: 350px;
+    }
+}
+@media screen and (max-width:376px){
+    .abc-form{
+        width: 300px;
+    }
+}
