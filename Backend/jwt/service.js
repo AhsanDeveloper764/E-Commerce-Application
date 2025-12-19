@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 const {Access_Secret_Token,Refresh_Secret_Token} = require("../config/index");
+const RefreshTokenModel = require("../models/tokenSchema");
 
 class JWTServices{
     // SignAccessToken
@@ -18,6 +19,18 @@ class JWTServices{
     static verifyRefreshToken(token){
         return jwt.verify(token,Refresh_Secret_Token)
     }   
+    static async StoreRefreshToken(token,userId){
+        try {
+            const newToken = new RefreshTokenModel({
+                token:token,
+                userId:userId
+            })
+            await newToken.save();
+        } catch (error) {
+            console.log("Error Occured at TokenStore",error);
+        }
+    }
+
 }
 
 module.exports = JWTServices
