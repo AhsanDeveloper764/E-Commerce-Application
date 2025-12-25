@@ -6,7 +6,7 @@ const errorHandler = (error,req,resp,next) => {
         message:"Internal Server Error"
     }
     if(error instanceof ValidationError){
-        status = 400;
+        status = 401;
         data.message = error.message;
         return resp.status(status).json(data)
     }

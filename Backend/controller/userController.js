@@ -155,9 +155,7 @@ const UserController =  {
     async logOut(req,resp,next){
         const refreshToken = req.cookies;
         try {
-            await RefreshTokenModel.deleteOne({
-                token:refreshToken
-            })
+            await RefreshTokenModel.deleteOne({token:refreshToken})
         } catch (error) {
             return next(error)
         }
