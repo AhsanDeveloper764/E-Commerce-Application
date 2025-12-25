@@ -4,7 +4,8 @@ const app = express()
 const {PORT} = require("./config/index")
 const dbConnect = require("./db/index")
 const cookieParser = require("cookie-parser")
-const router = require("./routes/index")
+const UserRouter = require("./routes/userRoutes")
+const proRouter = require("./routes/productRoutes")
 const errorHandler = require("./middleware/errorhandler")
 
 const corsOption = {
@@ -14,7 +15,8 @@ const corsOption = {
 
 app.use(express.json())
 app.use(cors(corsOption))
-app.use("/api",router)
+app.use("/api",UserRouter)
+app.use("/product",proRouter)
 app.use(cookieParser)
 dbConnect()
 
