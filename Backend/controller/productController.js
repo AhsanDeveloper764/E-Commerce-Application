@@ -1,7 +1,8 @@
 const Joi = require("joi");
 const fs = require("fs");
 const productSchema = require("../models/productsSchema");
-const {BACKEND_SERVER_PATH} = require("../config/index");
+const cloudinary = require("cloudinary")
+const productDto = require("../DataObject/productDto") 
 
 const productController = {
     async createProduct(req,resp,next){
@@ -19,7 +20,31 @@ const productController = {
             return next(error)
         }
         const {productname,price,discount,color,quantity,image} = req.body;
-            
+        let response;
+        try {
+            response = await cloudinary.uploader.upload(image); 
+        } catch (error) {
+            return next(error)
+        }
+        let product;
+        try {
+            product = new productSchema({
+                productname,
+                price,
+                discount,
+                color,
+                quantity,
+                imagePath:response.url
+            })
+            await product.save()
+        } catch (error) {
+            return next(error)
+        }
+        const Prodto = new productDto(product)
+        return resp.status(201).json({
+                product:Prodto,
+                message:"Your Product has been Submitted Sucessfully"
+        })
     },
     async getProduct(req,resp,next){
 
