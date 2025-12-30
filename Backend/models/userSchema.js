@@ -13,7 +13,9 @@ const UserSchema = new mongoose.Schema({
     country:{type:String,required:true},
     code:{type:Number,required:true},
     phoneNumber:{type:Number,required:true},
-},{timestamps:true})
+},
+    {timestamps:true}
+)
 
-const UserModel = mongoose.model("User",UserSchema,"userdatas")
+const UserModel = mongoose.model("UserRef",UserSchema,"userdatas")
 module.exports = UserModel;
