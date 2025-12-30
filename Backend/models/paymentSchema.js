@@ -14,12 +14,10 @@ const paymentSchema = new mongoose.Schema({
         enum:["pending","paid","failes","refund"],
         default:"pending",
     },
-    transactionId:{
-        type:String
-    }
+    transactionId:{type:String}
 },
     {timestamps:true}
 )
 
-const  paymentModel = mongoose.model("PaymentRef",paymentSchema,"Payment")
+const  paymentModel = mongoose.model("paymentRef",paymentSchema,"payment")
 module.exports = paymentModel 
