@@ -62,10 +62,10 @@ const UserController =  {
                 phoneNumber:data.phoneNumber,
             }) 
         
-        dataAbc = await UserDb.save();
-        accessToken = JWTServices.SignAccessToken({_id:dataAbc._id},"15s");
-        refreshToken = JWTServices.SignRefreshToken({_id:dataAbc._id},"60m");
-        
+            dataAbc = await UserDb.save();
+            accessToken = JWTServices.SignAccessToken({_id:dataAbc._id},"15s");
+            refreshToken = JWTServices.SignRefreshToken({_id:dataAbc._id},"60m");
+            
         }catch(error){
             return next(error)
         }
