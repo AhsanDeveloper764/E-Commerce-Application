@@ -48,8 +48,7 @@ const ProductList = (props) => {
                       <img src={item.img1} className="av" alt="" />
                     </Link>
                     <div style={{ position: "absolute", bottom: "0px" }}>
-                      <span>{" "}<del style={{ color: "red" }}>{" "}{item.del_price}{" "}
-                        </del> |{" "}</span>
+                      <span>{" "}<del style={{ color: "red" }}>{" "}{item.del_price}{" "}</del> |{" "}</span>
                       <span>{item.price}</span>
                     </div>
                   </div>
