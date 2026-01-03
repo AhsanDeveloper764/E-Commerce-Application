@@ -85,12 +85,11 @@ const SingleProduct = () => {
 
   const addToCart = () => {
     const cart = JSON.parse(localStorage.getItem("Products")) || [];
-    let isProductIndex = cart.findIndex((item) => item._id === ProductData._id 
-    && item.Size == selectedSize);
+    let isProductIndex = cart.findIndex((item) => item._id === ProductData._id && item.Size == selectedSize);
 
     // Product found
     // Means yay product with selected size cart main hay
-    if (isProductIndex !== -1) {
+    if(isProductIndex !== -1){
       cart[isProductIndex].Quantity += getCount;
       cart[isProductIndex].Total = parseInt(cart[isProductIndex].Quantity) * parseInt(cart[isProductIndex].price);
     } else {
