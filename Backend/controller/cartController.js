@@ -1,9 +1,9 @@
-const Joi = require("joi")
-const fs = require("fs")
-const cartSchema = require("../models/cartSchema")
-const userSchema = require("../models/userSchema")
-const productSchema = require("../models/productsSchema")
-const mongodbIdPattern = /^[a-fA-F0-9]{24}$/
+const Joi = require("joi");
+const fs = require("fs");
+const cartSchema = require("../models/cartSchema");
+const userSchema = require("../models/userSchema");
+const productSchema = require("../models/productsSchema");
+const mongodbIdPattern = /^[a-fA-F0-9]{24}$/;
 
 const cartController = {
     async addCart(req,resp,next){
