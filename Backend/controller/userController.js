@@ -1,5 +1,5 @@
 const Joi = require("joi");
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcrypt");
 const UserModel = require("../models/userSchema");
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$/;
 const JWTServices = require("../jwt/service");
