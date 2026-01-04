@@ -13,3 +13,5 @@ const productSchema = new mongoose.Schema({
 
 const product = mongoose.model("ProductRef",productSchema,"Product")
 module.exports=product;
+
+// Ye relation create karta hai (like foreign key). ProductRef
