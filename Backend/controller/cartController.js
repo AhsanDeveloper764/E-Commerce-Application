@@ -82,7 +82,7 @@ const cartController = {
             await cartItem.save()
             resp.status(200).json({
                 success: true,
-                message: "Item removed",
+                message: "Item Removed",
                 response: cart
             });
         } catch (error) {

@@ -1,10 +1,8 @@
 const Joi = require("joi");
-const fs = require("fs");
 const productSchema = require("../models/productsSchema");
 const cloudinary = require("cloudinary")
 const productDto = require("../DataObject/productDto") 
 const {CloudName,apikey,apiSecret} = require("../config/index");
-const productDetails = require("../DataObject/productDetail");
 const mongodbIdPattern = /^[a-fA-F0-9]{24}$/
 
 const Cloudinary = async () =>  {
